@@ -1,6 +1,10 @@
 // @flow
 
-export default () => {
+import variable from './../variables/platform';
+
+export default (variables /*: * */ = variable) => {
+  const platform = variables.platform;
+
   const fabTheme = {
     'NativeBase.Button': {
       alignItems: 'center',
@@ -10,15 +14,15 @@ export default () => {
         alignSelf: 'center',
         fontSize: 20,
         marginLeft: 0,
-        marginRight: 0
+        marginRight: 0,
       },
       'NativeBase.IconNB': {
         alignSelf: 'center',
         fontSize: 20,
         marginLeft: 0,
-        marginRight: 0
-      }
-    }
+        marginRight: 0,
+      },
+    },
   };
 
   return fabTheme;

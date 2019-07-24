@@ -2,7 +2,7 @@
 
 import variable from './../variables/platform';
 
-export default (variables /* : * */ = variable) => {
+export default (variables /*: * */ = variable) => {
   const cardTheme = {
     '.transparent': {
       shadowColor: null,
@@ -20,7 +20,7 @@ export default (variables /* : * */ = variable) => {
       elevation: null
     },
     marginVertical: 5,
-    marginHorizontal: 2,
+    marginHorizontal: 1,
     borderWidth: variables.borderWidth,
     borderRadius: variables.cardBorderRadius,
     borderColor: variables.cardBorderColor,

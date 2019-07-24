@@ -3,7 +3,7 @@
 import variable from './../variables/platform';
 import { PLATFORM } from './../variables/commonColor';
 
-export default (variables /* : * */ = variable) => {
+export default (variables /*: * */ = variable) => {
   const platformStyle = variables.platformStyle;
   const platform = variables.platform;
 
@@ -39,7 +39,7 @@ export default (variables /* : * */ = variable) => {
         },
         alignSelf: null,
         ...iconCommon,
-        ...iconNBCommon
+        ...iconNBCommon,
         // ...textCommon
       },
       flex: 1,
@@ -71,7 +71,7 @@ export default (variables /* : * */ = variable) => {
           flex: 1
         },
         ...iconCommon,
-        ...iconNBCommon
+        ...iconNBCommon,
         // ...textCommon
       }
     },
@@ -91,7 +91,7 @@ export default (variables /* : * */ = variable) => {
         },
         alignSelf: null,
         ...iconCommon,
-        ...iconNBCommon
+        ...iconNBCommon,
         // ...textCommon
       },
       flex: 1,

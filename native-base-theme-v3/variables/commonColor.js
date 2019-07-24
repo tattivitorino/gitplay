@@ -1,6 +1,7 @@
 // @flow
 
 import color from 'color';
+
 import { Platform, Dimensions, PixelRatio } from 'react-native';
 
 export const PLATFORM = {
@@ -15,37 +16,20 @@ const deviceWidth = Dimensions.get('window').width;
 const platform = Platform.OS;
 const platformStyle = undefined;
 const isIphoneX =
-  platform === PLATFORM.IOS &&
-  (deviceHeight === 812 ||
-    deviceWidth === 812 ||
-    deviceHeight === 896 ||
-    deviceWidth === 896);
+  platform === PLATFORM.IOS && (deviceHeight === 812 || deviceWidth === 812 || deviceHeight === 896 || deviceWidth === 896);
 
 export default {
   platformStyle,
   platform,
 
-  // Accordion
+  //Accordion
   headerStyle: '#edebed',
   iconStyle: '#000',
   contentStyle: '#f5f4f5',
   expandedIconStyle: '#000',
   accordionBorderColor: '#d3d3d3',
 
-  // ActionSheet
-  elevation: 4,
-  containerTouchableBackgroundColor: 'rgba(0,0,0,0.4)',
-  innerTouchableBackgroundColor: '#fff',
-  listItemHeight: 50,
-  listItemBorderColor: 'transparent',
-  marginHorizontal: -15,
-  marginLeft: 14,
-  marginTop: 15,
-  minHeight: 56,
-  padding: 15,
-  touchableTextColor: '#757575',
-
-  // Android
+  //Android
   androidRipple: true,
   androidRippleColor: 'rgba(256, 256, 256, 0.3)',
   androidRippleColorDark: 'rgba(0, 0, 0, 0.15)',
@@ -91,9 +75,7 @@ export default {
     return this.inverseTextColor;
   },
   get buttonTextSize() {
-    return platform === PLATFORM.IOS
-      ? this.fontSizeBase * 1.1
-      : this.fontSizeBase - 1;
+    return platform === PLATFORM.IOS ? this.fontSizeBase * 1.1 : this.fontSizeBase - 1;
   },
   get buttonTextSizeLarge() {
     return this.fontSizeBase * 1.5;
@@ -138,15 +120,12 @@ export default {
   brandDark: '#000',
   brandLight: '#f4f4f4',
 
-  // Container
+  //Container
   containerBgColor: '#fff',
 
-  // Date Picker
+  //Date Picker
   datePickerTextColor: '#000',
   datePickerBg: 'transparent',
-
-  // FAB
-  fabWidth: 56,
 
   // Font
   DefaultFontSize: 16,
@@ -293,7 +272,7 @@ export default {
   isIphoneX,
   inputGroupRoundedBorderRadius: 30,
 
-  // iPhoneX SafeArea
+  //iPhoneX SafeArea
   Inset: {
     portrait: {
       topInset: 24,

@@ -6,7 +6,7 @@ import pickerTheme from './Picker';
 import variable from './../variables/platform';
 import { PLATFORM } from './../variables/commonColor';
 
-export default (variables /* : * */ = variable) => {
+export default (variables /*: * */ = variable) => {
   const platform = variables.platform;
   const selectedStyle = {
     'NativeBase.Text': {
@@ -92,8 +92,7 @@ export default (variables /* : * */ = variable) => {
       '.first': {
         paddingTop: variables.listItemPadding + 3
       },
-      borderBottomWidth:
-        platform === PLATFORM.IOS ? variables.borderWidth : null,
+      borderBottomWidth: platform === PLATFORM.IOS ? variables.borderWidth : null,
       marginLeft: null,
       padding: variables.listItemPadding,
       paddingLeft: variables.listItemPadding + 5,

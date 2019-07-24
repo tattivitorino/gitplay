@@ -1,6 +1,7 @@
 // @flow
 
 import color from 'color';
+
 import { Platform, Dimensions, PixelRatio } from 'react-native';
 
 import { PLATFORM } from './commonColor';
@@ -10,37 +11,18 @@ const deviceWidth = Dimensions.get('window').width;
 const platform = Platform.OS;
 const platformStyle = undefined;
 const isIphoneX =
-  platform === PLATFORM.IOS &&
-  (deviceHeight === 812 ||
-    deviceWidth === 812 ||
-    deviceHeight === 896 ||
-    deviceWidth === 896);
+platform === PLATFORM.IOS && (deviceHeight === 812 || deviceWidth === 812 || deviceHeight === 896 || deviceWidth === 896);
 
 export default {
   platformStyle,
   platform,
 
-  // Accordion
-  accordionBorderColor: '#d3d3d3',
-  accordionContentPadding: 10,
-  accordionIconFontSize: 18,
-  contentStyle: '#f5f4f5',
-  expandedIconStyle: '#000',
+  //Accordion
   headerStyle: '#edebed',
   iconStyle: '#000',
-
-  // ActionSheet
-  elevation: 4,
-  containerTouchableBackgroundColor: 'rgba(0,0,0,0.4)',
-  innerTouchableBackgroundColor: '#fff',
-  listItemHeight: 50,
-  listItemBorderColor: 'transparent',
-  marginHorizontal: -15,
-  marginLeft: 14,
-  marginTop: 15,
-  minHeight: 56,
-  padding: 15,
-  touchableTextColor: '#757575',
+  contentStyle: '#f5f4f5',
+  expandedIconStyle: '#000',
+  accordionBorderColor: '#d3d3d3',
 
   // Android
   androidRipple: true,
@@ -57,10 +39,6 @@ export default {
   buttonFontFamily: platform === PLATFORM.IOS ? 'System' : 'Roboto_medium',
   buttonDisabledBg: '#b5b5b5',
   buttonPadding: 6,
-  buttonDefaultActiveOpacity: 0.5,
-  buttonDefaultFlex: 1,
-  buttonDefaultBorderRadius: 2,
-  buttonDefaultBorderWidth: 1,
   get buttonPrimaryBg() {
     return this.brandPrimary;
   },
@@ -92,9 +70,7 @@ export default {
     return this.inverseTextColor;
   },
   get buttonTextSize() {
-    return platform === PLATFORM.IOS
-      ? this.fontSizeBase * 1.1
-      : this.fontSizeBase - 1;
+    return platform === PLATFORM.IOS ? this.fontSizeBase * 1.1 : this.fontSizeBase - 1;
   },
   get buttonTextSizeLarge() {
     return this.fontSizeBase * 1.5;
@@ -129,8 +105,6 @@ export default {
   checkboxBgColor: '#039BE5',
   checkboxSize: 20,
   checkboxTickColor: '#fff',
-  checkboxDefaultColor: 'transparent',
-  checkboxTextShadowRadius: 0,
 
   // Color
   brandPrimary: platform === PLATFORM.IOS ? '#007aff' : '#3F51B5',
@@ -141,34 +115,12 @@ export default {
   brandDark: '#000',
   brandLight: '#f4f4f4',
 
-  // Container
+  //Container
   containerBgColor: '#fff',
 
-  // Date Picker
-  datePickerFlex: 1,
-  datePickerPadding: 10,
+  //Date Picker
   datePickerTextColor: '#000',
   datePickerBg: 'transparent',
-
-  // FAB
-  fabBackgroundColor: 'blue',
-  fabBorderRadius: 28,
-  fabBottom: 0,
-  fabButtonBorderRadius: 20,
-  fabButtonHeight: 40,
-  fabButtonLeft: 7,
-  fabButtonMarginBottom: 10,
-  fabContainerBottom: 20,
-  fabDefaultPosition: 20,
-  fabElevation: 4,
-  fabIconColor: '#fff',
-  fabIconSize: 24,
-  fabShadowColor: '#000',
-  fabShadowOffsetHeight: 2,
-  fabShadowOffsetWidth: 0,
-  fabShadowOpacity: 0.4,
-  fabShadowRadius: 2,
-  fabWidth: 56,
 
   // Font
   DefaultFontSize: 16,
@@ -279,7 +231,6 @@ export default {
   inverseSpinnerColor: '#1A191B',
 
   // Tab
-  tabBarDisabledTextColor: '#BDBDBD',
   tabDefaultBg: platform === PLATFORM.IOS ? '#F8F8F8' : '#3F51B5',
   topTabBarTextColor: platform === PLATFORM.IOS ? '#6b6b6b' : '#b3c7f9',
   topTabBarActiveTextColor: platform === PLATFORM.IOS ? '#007aff' : '#fff',
@@ -316,7 +267,7 @@ export default {
   isIphoneX,
   inputGroupRoundedBorderRadius: 30,
 
-  // iPhoneX SafeArea
+  //iPhoneX SafeArea
   Inset: {
     portrait: {
       topInset: 24,

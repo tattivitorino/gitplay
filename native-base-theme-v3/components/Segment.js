@@ -3,7 +3,7 @@
 import variable from './../variables/platform';
 import { PLATFORM } from './../variables/commonColor';
 
-export default (variables /* : * */ = variable) => {
+export default (variables /*: * */ = variable) => {
   const platform = variables.platform;
 
   const segmentTheme = {
@@ -19,7 +19,7 @@ export default (variables /* : * */ = variable) => {
       paddingBottom: 3,
       height: 30,
       backgroundColor: 'transparent',
-      borderWidth: 1,
+      borderWidth: 0,
       borderLeftWidth: 0,
       borderColor: variables.segmentBorderColor,
       elevation: 0,

@@ -1,6 +1,10 @@
 // @flow
 
-export default () => {
+import variable from './../variables/platform';
+
+export default (variables /*: * */ = variable) => {
+  const platform = variables.platform;
+
   const theme = {
     'NativeBase.Item': {
       '.fixedLabel': {

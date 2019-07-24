@@ -1,8 +1,6 @@
-/* eslint-disable no-param-reassign */
 // @flow
 
 import _ from 'lodash';
-
 import bodyTheme from './Body';
 import leftTheme from './Left';
 import rightTheme from './Right';
@@ -44,10 +42,10 @@ import cardItemTheme from './CardItem';
 import listItemTheme from './ListItem';
 import formTheme from './Form';
 import separatorTheme from './Separator';
-import pickerTheme from './Picker';
+import pickerTheme from './Picker'
 import variable from './../variables/platform';
 
-export default (variables /* : * */ = variable) => {
+export default (variables /*: * */ = variable) => {
   const theme = {
     variables,
     'NativeBase.Left': {
@@ -232,12 +230,7 @@ export default (variables /* : * */ = variable) => {
           }
         }
       }
-      if (
-        style &&
-        typeof style === 'object' &&
-        styleName !== 'fontVariant' &&
-        styleName !== 'transform'
-      ) {
+      if (style && typeof style === 'object' && styleName !== 'fontVariant' && styleName !== 'transform') {
         cssifyTheme(parent, style, styleName);
       }
     });

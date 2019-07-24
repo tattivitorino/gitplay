@@ -3,7 +3,7 @@
 import variable from './../variables/platform';
 import { PLATFORM } from './../variables/commonColor';
 
-export default (variables /* : * */ = variable) => {
+export default (variables /*: * */ = variable) => {
   const platformStyle = variables.platformStyle;
   const platform = variables.platform;
   const darkCommon = {
@@ -37,6 +37,17 @@ export default (variables /* : * */ = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.buttonPrimaryBg
+    }
+  };
+  const secondaryCommon = {
+    'NativeBase.Text': {
+      color: variables.buttonSecondaryBg
+    },
+    'NativeBase.Icon': {
+      color: variables.buttonSecondaryBg
+    },
+    'NativeBase.IconNB': {
+      color: variables.buttonSecondaryBg
     }
   };
   const successCommon = {
@@ -104,6 +115,7 @@ export default (variables /* : * */ = variable) => {
         color: variables.brandLight
       },
       backgroundColor: variables.buttonDisabledBg
+      //opacity: 0.5
     },
     '.bordered': {
       '.dark': {
@@ -122,6 +134,12 @@ export default (variables /* : * */ = variable) => {
         ...primaryCommon,
         backgroundColor: 'transparent',
         borderColor: variables.buttonPrimaryBg,
+        borderWidth: variables.borderWidth * 2
+      },
+      '.secondary': {
+        ...secondaryCommon,
+        backgroundColor: 'transparent',
+        borderColor: variables.buttonSecondaryBg,
         borderWidth: variables.borderWidth * 2
       },
       '.success': {
@@ -190,28 +208,30 @@ export default (variables /* : * */ = variable) => {
       },
       backgroundColor: variables.buttonPrimaryBg
     },
-
+    '.secondary': {
+      '.bordered': {
+        ...secondaryCommon
+      },
+      backgroundColor: variables.buttonSecondaryBg
+    },
     '.success': {
       '.bordered': {
         ...successCommon
       },
       backgroundColor: variables.buttonSuccessBg
     },
-
     '.info': {
       '.bordered': {
         ...infoCommon
       },
       backgroundColor: variables.buttonInfoBg
     },
-
     '.warning': {
       '.bordered': {
         ...warningCommon
       },
       backgroundColor: variables.buttonWarningBg
     },
-
     '.danger': {
       '.bordered': {
         ...dangerCommon
@@ -223,7 +243,6 @@ export default (variables /* : * */ = variable) => {
       justifyContent: 'center',
       alignSelf: 'stretch'
     },
-
     '.full': {
       justifyContent: 'center',
       alignSelf: 'stretch',
@@ -231,6 +250,7 @@ export default (variables /* : * */ = variable) => {
     },
 
     '.rounded': {
+      // paddingHorizontal: variables.buttonPadding + 20,
       borderRadius: variables.borderRadiusLarge
     },
 
@@ -244,24 +264,35 @@ export default (variables /* : * */ = variable) => {
       ...primaryCommon,
       '.dark': {
         ...darkCommon,
+        backgroundColor: 'transparent'
       },
       '.danger': {
         ...dangerCommon,
+        backgroundColor: 'transparent'
       },
       '.warning': {
         ...warningCommon,
+        backgroundColor: 'transparent'
       },
       '.info': {
         ...infoCommon,
+        backgroundColor: 'transparent'
       },
       '.primary': {
         ...primaryCommon,
+        backgroundColor: 'transparent'
+      },
+      '.secondary': {
+        ...secondaryCommon,
+        backgroundColor: 'transparent'
       },
       '.success': {
         ...successCommon,
+        backgroundColor: 'transparent'
       },
       '.light': {
         ...lightCommon,
+        backgroundColor: 'transparent'
       },
       '.disabled': {
         backgroundColor: 'transparent',
@@ -297,7 +328,7 @@ export default (variables /* : * */ = variable) => {
     '.large': {
       height: 60,
       'NativeBase.Text': {
-        fontSize: 22
+        fontSize: 22,
       }
     },
 
@@ -316,8 +347,8 @@ export default (variables /* : * */ = variable) => {
       fontSize: variables.buttonTextSize,
       paddingHorizontal: 16,
       backgroundColor: 'transparent'
+      // childPosition: 1
     },
-
     'NativeBase.Icon': {
       color: variables.inverseTextColor,
       fontSize: 24,
@@ -365,16 +396,18 @@ export default (variables /* : * */ = variable) => {
         }
       }
     },
+
     paddingVertical: variables.buttonPadding,
+    // paddingHorizontal: variables.buttonPadding + 10,
     backgroundColor: variables.buttonPrimaryBg,
     borderRadius: variables.borderRadiusBase,
     borderColor: variables.buttonPrimaryBg,
     borderWidth: null,
     height: 45,
+    alignSelf: 'flex-start',
     flexDirection: 'row',
     elevation: 2,
-    shadowColor:
-      platformStyle === PLATFORM.MATERIAL ? variables.brandDark : undefined,
+    shadowColor: platformStyle === PLATFORM.MATERIAL ? variables.brandDark : undefined,
     shadowOffset:
       platformStyle === PLATFORM.MATERIAL ? { width: 0, height: 2 } : undefined,
     shadowOpacity: platformStyle === PLATFORM.MATERIAL ? 0.2 : undefined,
