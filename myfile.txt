@@ -5,3 +5,6 @@ git reset --hard 84ca6dfd03b157bd725e69fcc469462c48ceaefb
 Modifying my file 
 
 noe i'm back to branch iss01 again after iss02
+i'm on the iss02 branch now
+
+another commit on iss02
