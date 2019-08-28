@@ -8,4 +8,6 @@ todos os anteriores estão no git
 
 alterei o psd e mandei para o git
 
-alterei o psd de novo
+alterei o psd de novo fundo clean
+
+alterei o psd para fundo escuro e vou manter local
