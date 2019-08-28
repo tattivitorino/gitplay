@@ -10,4 +10,6 @@ alterei o psd e mandei para o git
 
 alterei o psd de novo fundo clean
 
-alterei o psd para fundo escuro e vou manter local
+alterei o psd para fundo escuro e vou manter local (01)
+
+alterei o psd para fundo clean e vou manter local (02)
