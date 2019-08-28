@@ -1,0 +1,17 @@
+meu novo arquivo feature 01 na feature01 branch
+
+commit 02 na feature01
+
+commit 03 na feature 01
+
+todos os anteriores estão no git
+
+alterei o psd e mandei para o git
+
+alterei o psd de novo fundo clean
+
+alterei o psd para fundo escuro e vou manter local (01)
+
+alterei o psd para fundo clean e vou manter local (02)
+
+alterei o psd para fundo escuro e vou manter local (03)
