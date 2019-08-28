@@ -5,3 +5,7 @@ Modifying my file and commiting again
 comitando em master depois do psd 01
 
 comitando em master depois do psd 02
+
+comitando em master depois do psd 03
+
+todos esses anteriores estão no git
